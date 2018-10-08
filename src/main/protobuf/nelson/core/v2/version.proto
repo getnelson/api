@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package nelson.core.v2;
+
+message Version {
+  int64 series = 1;
+  int64 feature = 2;
+  int64 patch = 3;
+}

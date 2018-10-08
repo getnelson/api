@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package nelson.data.v2.deployable;
+
+message Deployable {
+  string unit_name = 1;
+  oneof kind {
+    Docker docker = 2;
+  }
+}
+
+message Docker {
+  string image = 1;
+}
