@@ -1,0 +1,18 @@
+---
+steps:
+  - label: ":hammer: build"
+    command: .buildkite/pipeline.exec.sh
+    concurrency: 1
+    concurrency_group: primary
+    timeout_in_minutes: 45
+    branches: master
+    agents:
+      os: linux
+
+  - wait
+
+  - label: ":radioactive_sign: teardown"
+    command: .buildkite/pipeline.teardown.sh
+    branches: master
+    agents:
+      os: linux
