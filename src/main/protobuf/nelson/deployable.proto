@@ -4,10 +4,13 @@ package nelson.api;
 
 option go_package = "nelson";
 
+import "nelson/version.proto";
+
 message Deployable {
   string unit_name = 1;
+  Version version = 2;
   oneof kind {
-    Docker docker = 2;
+    Docker docker = 3;
   }
 }
 
