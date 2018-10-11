@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package nelson.api;
 
-option go_package = "deployable";
+option go_package = "nelson";
 
 message Deployable {
   string unit_name = 1;
