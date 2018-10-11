@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-package nelson.core.v2;
+package nelson.api;
+
+option go_package = "nelson";
 
 message Version {
   int64 series = 1;

@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-package nelson.data.v2.deployable;
+package nelson.api;
+
+option go_package = "deployable";
 
 message Deployable {
   string unit_name = 1;
