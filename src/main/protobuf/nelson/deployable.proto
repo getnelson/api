@@ -6,14 +6,23 @@ option go_package = "nelson";
 
 import "nelson/version.proto";
 
+message Deployables {
+  repeated Deployable deployables = 1;
+}
+
 message Deployable {
   string unit_name = 1;
   Version version = 2;
   oneof kind {
     Docker docker = 3;
+    Rkt rkt = 4;
   }
 }
 
 message Docker {
   string image = 1;
+}
+
+message Rkt {
+  string url = 1;
 }
