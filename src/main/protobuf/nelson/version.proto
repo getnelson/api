@@ -5,7 +5,7 @@ package nelson.api;
 option go_package = "nelson";
 
 message Version {
-  int64 series = 1;
-  int64 feature = 2;
-  int64 patch = 3;
+  int32 series = 1;
+  int32 feature = 2;
+  int32 patch = 3;
 }

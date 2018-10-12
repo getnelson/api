@@ -1,5 +1,5 @@
 
-organization in Global := "io.getnelson.api"
+organization in Global := "io.getnelson.nelson"
 
 scalaVersion in Global := "2.11.11"
 
